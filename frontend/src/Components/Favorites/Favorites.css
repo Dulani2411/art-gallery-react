@@ -1,0 +1,277 @@
+/* Favorites.css - Elegant Blue Theme */
+
+.favorites-container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: var(--secondary-color, #f0f5fa);
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    color: var(--text-color, #34495e);
+    line-height: 1.7;
+}
+
+.favorites-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--light-color, #e8f1f9);
+}
+
+.favorites-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-color, #1a2a3a);
+    font-family: 'Playfair Display', serif;
+}
+
+.favorites-count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color, #34495e);
+    font-size: 1.1rem;
+}
+
+.favorites-count .heart-icon {
+    color: var(--accent-color, #3498db);
+    font-size: 1.5rem;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem 0;
+}
+
+.favorite-card {
+    background: var(--pure-white, #fff);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--soft-gray, #d1e2f2);
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.favorite-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(52, 152, 219, 0.08);
+}
+
+.favorite-image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.favorite-card:hover .favorite-image {
+    transform: scale(1.05);
+}
+
+.favorite-info {
+    padding: 1rem 0;
+}
+
+.favorite-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--dark-color, #1a2a3a);
+    margin: 16px 20px 4px;
+}
+
+.favorite-price, .favorite-artist {
+    margin: 0 20px;
+    font-size: 0.95rem;
+    color: var(--text-color, #34495e);
+}
+
+.favorite-price span {
+    color: var(--accent-color, #3498db);
+    font-weight: 700;
+}
+
+.favorite-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px 20px;
+    border-top: 1px solid var(--light-color, #e8f1f9);
+    background-color: var(--secondary-color, #f0f5fa);
+    margin-top: auto;
+}
+
+.remove-favorite-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #e91e63;
+    border: 1px solid var(--soft-gray, #d1e2f2);
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-favorite-btn:hover {
+    background: #fff5f7;
+    border-color: #e91e63;
+}
+
+.add-to-cart-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to right, var(--accent-color, #3498db), #5dade2);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart-btn:hover {
+    background: linear-gradient(to right, #2980b9, var(--accent-color, #3498db));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+}
+
+.clear-favorites-btn {
+    background: transparent;
+    color: var(--text-color, #34495e);
+    border: 1px solid var(--soft-gray, #d1e2f2);
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-favorites-btn:hover {
+    background: var(--light-color, #e8f1f9);
+    border-color: var(--accent-color, #3498db);
+    color: var(--accent-color, #3498db);
+}
+
+/* Empty favorites state */
+.empty-favorites {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--pure-white, #fff);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.05);
+    margin: 2rem 0;
+}
+
+.empty-favorites h2 {
+    font-size: 2rem;
+    color: var(--primary-color, #2c3e50);
+    margin-bottom: 1.5rem;
+}
+
+.empty-favorites p {
+    font-size: 1.2rem;
+    color: var(--text-color, #34495e);
+    margin-bottom: 2rem;
+}
+
+.empty-heart-icon {
+    font-size: 4rem;
+    color: var(--accent-color, #3498db);
+    opacity: 0.6;
+    margin-bottom: 1.5rem;
+}
+
+.explore-art-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(to right, var(--accent-color, #3498db), #5dade2);
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.explore-art-btn:hover {
+    background: linear-gradient(to right, #2980b9, var(--accent-color, #3498db));
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+}
+
+/* Loading state */
+.loading-spinner {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: var(--text-color, #34495e);
+}
+
+/* Badge for special states */
+.favorite-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(52, 152, 219, 0.9);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .favorites-header h1 {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .favorites-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .favorites-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .favorites-grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .favorites-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    .favorites-header h1 {
+        font-size: 2rem;
+    }
+    
+    .favorites-grid {
+        grid-template-columns: 1fr;
+    }
+}

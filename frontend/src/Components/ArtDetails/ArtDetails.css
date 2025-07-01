@@ -1,0 +1,175 @@
+/* ArtDetail.css - Blue Theme */
+:root {
+  --primary-color: #2c3e50; /* Deep navy blue for primary brand color */
+  --secondary-color: #f0f5fa; /* Light blue-gray for backgrounds */
+  --accent-color: #3498db; /* Vibrant medium blue for accents and highlights */
+  --light-color: #e8f1f9; /* Pale blue for subtle backgrounds and dividers */
+  --dark-color: #1a2a3a; /* Dark blue for headers and emphasis */
+  --text-color: #34495e; /* Slate blue for text */
+  --pure-white: #FFFFFF; /* Pure white for contrast elements */
+  --soft-gray: #d1e2f2; /* Soft blue-gray for borders and secondary elements */
+  --border-radius: 8px; /* Rounded corners */
+  --box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1); /* Blue-tinted shadow */
+  
+  /* Additional colors */
+  --lighter-blue: #5dade2; /* Lighter blue for secondary buttons */
+  --darker-blue: #2980b9; /* Darker blue for hover states */
+  --very-light-blue: #c7ddf2; /* Very light blue for inactive states */
+  --deep-accent: #1d6fa5; /* Deep accent blue for important elements */
+  --medium-light-blue: #a3c6e8; /* Medium light blue for tertiary elements */
+  --delete-red: #e74c3c; /* Red for delete buttons */
+  --delete-red-hover: #c0392b; /* Darker red for delete button hover */
+}
+
+.art-details-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.art-details-card {
+  background: var(--pure-white);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--soft-gray);
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.art-details-image {
+  flex: 1;
+  max-width: 50%;
+}
+
+.detail-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.art-details-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-detail-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+
+.art-detail-info {
+  margin-bottom: 2rem;
+}
+
+.art-detail-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: var(--text-color);
+}
+
+.art-detail-price, 
+.art-detail-artist, 
+.art-detail-contact, 
+.art-detail-id {
+  font-size: 1.1rem;
+  margin: 0.7rem 0;
+  color: var(--primary-color);
+}
+
+.art-detail-price span, 
+.art-detail-artist span, 
+.art-detail-contact span, 
+.art-detail-id span {
+  color: var(--dark-color);
+  font-weight: 600;
+}
+
+.art-detail-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.update-btn, 
+.delete-btn, 
+.download-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.update-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+}
+
+.update-btn:hover {
+  background-color: var(--darker-blue);
+  transform: translateY(-2px);
+}
+
+.delete-btn {
+  background-color: var(--delete-red);
+  color: white;
+  border: none;
+}
+
+.delete-btn:hover {
+  background-color: var(--delete-red-hover);
+  transform: translateY(-2px);
+}
+
+.download-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.download-btn:hover {
+  background-color: var(--dark-color);
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .art-details-card {
+    flex-direction: column;
+  }
+  
+  .art-details-image {
+    max-width: 100%;
+  }
+  
+  .art-detail-actions {
+    flex-direction: column;
+  }
+  
+  .update-btn,
+  .delete-btn,
+  .download-btn {
+    width: 100%;
+  }
+}

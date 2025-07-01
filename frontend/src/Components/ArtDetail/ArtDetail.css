@@ -1,0 +1,141 @@
+/* ArtDetail.css - Elegant Blue Theme */
+.art-detail-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--secondary-color, #f0f5fa);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(52, 152, 219, 0.15);
+  border: 1px solid var(--soft-gray, #d1e2f2);
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  color: var(--text-color, #34495e);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .art-detail-container {
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+.art-detail-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.art-detail-image img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(52, 152, 219, 0.1);
+  border: 1px solid var(--soft-gray, #d1e2f2);
+  transition: transform 0.5s ease;
+}
+
+.art-detail-image img:hover {
+  transform: scale(1.02);
+}
+
+.art-detail-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.art-detail-info h1 {
+  margin-top: 0;
+  color: var(--dark-color, #1a2a3a);
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.art-type {
+  font-size: 1.2rem;
+  color: var(--primary-color, #2c3e50);
+  margin-bottom: 12px;
+}
+
+.art-price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-color, #3498db);
+  margin-bottom: 24px;
+}
+
+.artist-info, .art-description {
+  margin-bottom: 24px;
+}
+
+.artist-info h3, .art-description h3 {
+  color: var(--primary-color, #2c3e50);
+  border-bottom: 1px solid var(--light-color, #e8f1f9);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.contact {
+  color: var(--text-color, #34495e);
+  font-size: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.add-to-cart-btn, .purchase-btn {
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.add-to-cart-btn {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--accent-color, #3498db);
+  border: 1px solid var(--accent-color, #3498db);
+}
+
+.add-to-cart-btn:hover {
+  background: rgba(52, 152, 219, 0.2);
+  transform: translateY(-2px);
+}
+
+.purchase-btn {
+  background: linear-gradient(to right, var(--accent-color, #3498db), var(--primary-color, #2c3e50));
+  color: white;
+  border: none;
+}
+
+.purchase-btn:hover {
+  background: linear-gradient(to right, #2980b9, #1d6fa5);
+  transform: translateY(-2px);
+}
+
+.loading {
+  text-align: center;
+  margin: 100px auto;
+  font-size: 1.2rem;
+  color: var(--text-color, #34495e);
+}
+
+.error, .not-found {
+  text-align: center;
+  margin: 100px auto;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  padding: 20px;
+  background-color: rgba(231, 76, 60, 0.1);
+  border-radius: 12px;
+  border: 1px solid rgba(231, 76, 60, 0.2);
+}

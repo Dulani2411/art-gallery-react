@@ -1,0 +1,230 @@
+/* View toggle button */
+.view-toggle {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    color: #495057;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #e9ecef;
+  }
+  
+  .toggle-btn.admin-active {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .toggle-btn.user-active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Admin container */
+  .admin-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-container h2 {
+    margin-top: 0;
+    color: #343a40;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-container h3 {
+    color: #495057;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  /* Stats section */
+  .cart-stats {
+    margin-bottom: 30px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .stat-box {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 8px;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  /* Raw data section */
+  .raw-data-section {
+    margin-bottom: 30px;
+  }
+  
+  .json-display {
+    background-color: #212529;
+    color: #e9ecef;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  /* Admin buttons */
+  .admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .admin-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+  }
+  
+  .admin-btn.refresh {
+    background-color: #17a2b8;
+    color: white;
+  }
+  
+  .admin-btn.refresh:hover {
+    background-color: #138496;
+  }
+  
+  .admin-btn.clear {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .admin-btn.clear:hover {
+    background-color: #c82333;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .admin-actions {
+      flex-direction: column;
+    }
+    
+    .admin-btn {
+      width: 100%;
+    }
+  }
+  
+  /* User view styling for cart details */
+  .user-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .summary-stats {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+  }
+  
+  .cart-items-list h3 {
+    margin-bottom: 15px;
+    color: #495057;
+  }
+  
+  .empty-cart-message {
+    padding: 20px;
+    text-align: center;
+    color: #6c757d;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+  }
+  
+  .items-table {
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .items-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 12px 15px;
+    background-color: #e9ecef;
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .item-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding: 15px;
+    border-top: 1px solid #dee2e6;
+    align-items: center;
+  }
+  
+  .item-row:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .view-cart-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+  
+  .view-cart-btn:hover {
+    background-color: #0069d9;
+    text-decoration: none;
+    color: white;
+  }
+  
